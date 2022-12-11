@@ -16,11 +16,7 @@ After this screenshot is taken, it's run through Tesseract to read the text insi
 And that text, finally, is copied to your clipboard (ctrl+v to paste)
 
 
-Calling 'ocrshot -i' will do the same thing but also invert the colors of the screenshot before pushing it to Tesseract.
-
-This is best if you use a dark theme
-
-(A dark background with light text should be inverted to a light background with dark text for Tesseract)
+Calling 'ocrshot -i' will do the same thing but also invert the colors of the screenshot before pushing it to Tesseract. The -i option is best if you use a dark theme (a dark background with light text should be inverted to a light background with dark text for Tesseract)
 
 
 ## Depends on
