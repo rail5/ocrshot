@@ -1,0 +1,44 @@
+#!/bin/bash
+
+## OCRSHOT
+## Simple bash script that allows you to copy-and-paste text via Optical Character Recognition
+
+### After calling 'ocrshot', your cursor will be used to select an area of your screen to screenshot
+### After this screenshot is taken, it's run through Tesseract to read the text inside it
+### And that text, finally, is copied to your clipboard (ctrl+v to paste)
+
+### Calling 'ocrshot -i' will do the same thing but also invert the colors of the screenshot before pushing it to Tesseract.
+### This is best if you use a dark theme
+### (A dark background with light text should be inverted to a light background with dark text for Tesseract)
+
+#### Depends:
+####  mate-screenshot (Mate desktop)
+####  xclip
+####  tesseract
+####  imagemagick
+
+
+##### IMO, this is useful for copying-and-pasting text from videos or photos, as well as from Google Docs et al services which go through great lengths to prevent ctrl+c ctrl+v
+##### Also IMO, it's most useful when tied to a quick&easy keyboard shortcut
+
+invertcmd=
+
+tmpfname=`mktemp`
+
+while getopts i flag
+do
+	case "${flag}" in
+		i) invertcmd="convert $tmpfname -negate $tmpfname";;
+	esac
+done
+echo $invertcmd
+
+mate-screenshot -a -c
+
+xclip -selection clip -t image/png -o > $tmpfname
+
+$invertcmd
+
+tesseract -c page_separator='' $tmpfname - | head -c -1 |  xclip -sel clip
+
+rm $tmpfname
