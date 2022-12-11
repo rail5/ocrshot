@@ -31,7 +31,6 @@ do
 		i) invertcmd="convert $tmpfname -negate $tmpfname";;
 	esac
 done
-echo $invertcmd
 
 mate-screenshot -a -c
 
