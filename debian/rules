@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	chmod +x ocrshot
+	install -D -m 0755 ocrshot $$(pwd)/debian/ocrshot/usr/bin/ocrshot

@@ -1,0 +1,14 @@
+Source: ocrshot
+Maintainer: rail5 <andrew@rail5.org>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Section: utils
+
+Package: ocrshot
+Version: 1.0
+License: GPL-3.0
+Vendor: rail5 <andrew@rail5.org>
+Priority: optional
+Architecture: any
+Depends: mate-utils, xclip, tesseract-ocr, graphicsmagick-imagemagick-compat
+Description: Copies text to clipboard from screenshot via OCR
