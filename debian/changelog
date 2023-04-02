@@ -1,3 +1,9 @@
+ocrshot (1.1) bullseye; urgency=medium
+
+  * Changed architecture from 'any' to 'all'
+
+ -- rail5 <andrew@rail5.org>  Sat, 01 Apr 2023 23:35:59 -0400
+
 ocrshot (1.0) bullseye; urgency=low
 
   * Initial release
