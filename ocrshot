@@ -12,7 +12,7 @@
 ### (A dark background with light text should be inverted to a light background with dark text for Tesseract)
 
 #### Depends:
-####  mate-screenshot (Mate desktop)
+####  maim (Screenshot utility)
 ####  xclip
 ####  tesseract
 ####  imagemagick
@@ -32,9 +32,7 @@ do
 	esac
 done
 
-mate-screenshot -a -c
-
-xclip -selection clip -t image/png -o > $tmpfname
+maim -s > $tmpfname
 
 $invertcmd
 
