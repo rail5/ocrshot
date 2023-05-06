@@ -1,6 +1,8 @@
 # ocrshot
 Copy &amp; paste text from videos &amp; photos by screenshotting
 
+![Demonstration](./ocrshot.gif)
+
 ## Description
 Simple bash script that allows you to copy-and-paste text via Optical Character Recognition
 
