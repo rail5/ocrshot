@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 ## OCRSHOT
 ## Simple bash script that allows you to copy-and-paste text via Optical Character Recognition

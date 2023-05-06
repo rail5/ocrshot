@@ -1,3 +1,14 @@
+ocrshot (1.3) bullseye; urgency=medium
+
+  * Removed reliance on non-standard GNU head
+  byte-count function and replaced it with
+  a POSIX-compliant call to echo.
+  Replaced the absolute path for the shell
+  interpreter with a call to env for multi-OS
+  portability.
+
+ -- rail5 <andrew@rail5.org>  Sat, 06 May 2023 00:52:55 -0400
+
 ocrshot (1.2) bullseye; urgency=medium
 
   * Removed dependency on mate-utils and replaced it
