@@ -1,3 +1,9 @@
+ocrshot (1.4) stable; urgency=medium
+
+  * Moving everything to Debian 12
+
+ -- rail5 <andrew@rail5.org>  Fri, 18 Aug 2023 23:16:17 -0400
+
 ocrshot (1.3) bullseye; urgency=medium
 
   * Removed reliance on non-standard GNU head
