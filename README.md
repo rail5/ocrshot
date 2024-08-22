@@ -22,7 +22,7 @@ Calling **'ocrshot -i'** will do the same thing but also *invert the colors* of 
 
 
 ## Depends on
- - maim (To take screenshots)
+ - gnome-screenshot
 
  - xclip (To put text in the clipboard)
 
