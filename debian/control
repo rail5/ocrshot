@@ -13,4 +13,4 @@ Priority: optional
 Architecture: all
 Depends: gnome-screenshot, xclip, tesseract-ocr, graphicsmagick-imagemagick-compat, ${misc:Depends}
 Description: Copies text to clipboard from screenshot via Optical Character Recognition
-ocrshot allows you to copy-and-paste text from videos, pictures, etc
+ ocrshot allows you to copy-and-paste text from videos, pictures, etc
