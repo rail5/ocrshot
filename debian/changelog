@@ -1,3 +1,11 @@
+ocrshot (1.5) stable; urgency=medium
+
+  * Switched maim to gnome-screenshot
+    This allows ocrshot to work on systems running either X11 or
+    Wayland.
+
+ -- rail5 <andrew@rail5.org>  Thu, 22 Aug 2024 14:44:46 +0800
+
 ocrshot (1.4) stable; urgency=medium
 
   * Moving everything to Debian 12
