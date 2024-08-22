@@ -12,7 +12,7 @@
 ### (A dark background with light text should be inverted to a light background with dark text for Tesseract)
 
 #### Depends:
-####  maim (Screenshot utility)
+####  gnome-screenshot
 ####  xclip
 ####  tesseract
 ####  imagemagick
@@ -23,21 +23,22 @@
 
 invertcmd=
 
-tmpfname=`mktemp`
+tmpfname=$(mktemp).png
 
 while getopts i flag
 do
 	case "${flag}" in
 		i) invertcmd="convert $tmpfname -negate $tmpfname";;
+		*) ;;
 	esac
 done
 
-maim -s > $tmpfname
+gnome-screenshot -a -f "$tmpfname"
 
 $invertcmd
 
-ocroutput=$(tesseract -c page_separator='' $tmpfname -)
+ocroutput=$(tesseract -c page_separator='' "$tmpfname" -)
 
 echo -n "$ocroutput" |  xclip -sel clip
 
-rm $tmpfname
+rm "$tmpfname"

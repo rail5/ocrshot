@@ -11,6 +11,6 @@ License: GPL-3.0
 Vendor: rail5 <andrew@rail5.org>
 Priority: optional
 Architecture: all
-Depends: maim, xclip, tesseract-ocr, graphicsmagick-imagemagick-compat
+Depends: gnome-screenshot, xclip, tesseract-ocr, graphicsmagick-imagemagick-compat
 Description: Copies text to clipboard from screenshot via Optical Character Recognition
   ocrshot allows you to copy-and-paste text from videos, pictures, etc
