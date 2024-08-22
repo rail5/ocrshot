@@ -1,3 +1,9 @@
+ocrshot (1.5.1) stable; urgency=medium
+
+  * Moved manpage to proper section and got lintian to quiet down
+
+ -- rail5 <andrew@rail5.org>  Thu, 22 Aug 2024 14:59:20 +0800
+
 ocrshot (1.5) stable; urgency=medium
 
   * Switched maim to gnome-screenshot
