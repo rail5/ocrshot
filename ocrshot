@@ -21,24 +21,26 @@
 ##### IMO, this is useful for copying-and-pasting text from videos or photos, as well as from Google Docs et al services which go through great lengths to prevent ctrl+c ctrl+v
 ##### Also IMO, it's most useful when tied to a quick&easy keyboard shortcut
 
-invertcmd=
+inverting=false
 
-tmpfname=$(mktemp).png
+temporary_file_name=$(mktemp).png
 
 while getopts i flag
 do
 	case "${flag}" in
-		i) invertcmd="convert $tmpfname -negate $tmpfname";;
+		i) inverting=true;;
 		*) ;;
 	esac
 done
 
-gnome-screenshot -a -f "$tmpfname"
+gnome-screenshot -a -f "$temporary_file_name"
 
-$invertcmd
+if [[ $inverting == true ]]; then
+	convert "$temporary_file_name" -negate "$temporary_file_name"
+fi
 
-ocroutput=$(tesseract -c page_separator='' "$tmpfname" -)
+ocr_output=$(tesseract -c page_separator='' "$temporary_file_name" -)
 
-echo -n "$ocroutput" |  xclip -sel clip
+echo -n "$ocr_output" |  xclip -sel clip
 
-rm "$tmpfname"
+rm "$temporary_file_name"
